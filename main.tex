@@ -1,0 +1,189 @@
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Yash Siwach} \\[8.5pt]
+\href{https://github.com/Iamyashsiwach}{\raisebox{-0.05\height}\faGithub\ Iamyashsiwach} \ $|$ \ 
+\href{www.linkedin.com/in/yash-siwach}{\raisebox{-0.05\height}\faLinkedin\ Yash Siwach} 
+$|$ \ 
+\href{mailto:Iamyashsiwach@Gmail.com}{\raisebox{-0.05\height}\faEnvelope \ Iamyashsiwach@Gmail.com} \ $|$ \ 
+\href{tel:+91-7206099609}{\raisebox{-0.05\height}\faMobile \ +91-7206099609} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+\section{Summary}
+An enthusiastic BCA student with a strong proficiency of Swift and SwiftUI, complemented by a background in UI/UX design. Proficient in developing polished iOS applications known for their seamless functionality and aesthetic appeal. Actively exploring the fusion of iOS development with AR/VR technologies to create immersive user experiences. Possesses a keen interest in database management systems (DBMS), enhancing technical versatility. Eager to contribute to groundbreaking projects at the intersection of technology and innovation. 
+
+%Experience
+\section{Work Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Vice President, Smile Foundation Society NGO} & \hfill Jan 2022 - Present \\[3.75pt]
+
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] 
+
+Promoted to Vice President based on performance. Dedicated to social work for the underprivileged. Led initiatives providing essential support. Organized outreach programs for meaningful change.
+    \end{itemize}
+    \end{minipage}
+} \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{ACM Student Member} & \hfill Fab 2023 - Mar 2024 \\[3.75pt]
+
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] 
+Contributed to team initiatives, developing leadership and event management skills. Organized and executed events, fostering a vibrant community.
+    \end{itemize}
+    \end{minipage}
+} \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{UI/UX Design Intern } & \hfill Apr 2023 - may 2023 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] 
+Gained hands-on experience in UI/UX design principles. Utilized Figma and Adobe XD to create intuitive interfaces. Developed strong understanding of UI design concepts.
+    \end{itemize}
+    \end{minipage}
+}
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+
+2022 - 2025 & Bachelor of Computer Applications (AR-VR) at \textbf{Chandigarh University} \hfill  \\ 
+
+2022 & Class 12th CBSE at DAV Public School, Thermal Colony, Panipat\hfill  \\
+
+2020 & Class 10th CBSE at DAV Public School, Thermal Colony, Panipat \hfill  \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	Licenses & certifications
+%----------------------------------------------------------------------------------------
+\section{Licenses \& certifications}
+\begin{refsection}[citations.bib]
+\nocite{*}
+\setlength{\bibitemsep}{0.5\baselineskip}
+\printbibliography[heading=none]
+\end{refsection}
+
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Technical Skills  &  \normalsize{Swift . SwiftUI . C\# . HTML5 . CSS3 . JavaScript . MySQL . Git . Xcode . Node.js . PHP . Figma . adobeXD . mongoDB . Express}\\
+Some More Skills  &  \normalsize{Teamwork . Leadership . Time management . Risk management . Adaptability . Decision-making . Presentation skill }\\  
+\end{tabularx}
+
+\vfill
+\center{\footnotesize Last updated: \6 may 2024}
+
+\end{document}
