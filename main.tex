@@ -1,189 +1,244 @@
-%----------------------------------------------------------------------------------------
-%	DOCUMENT DEFINITION
-%----------------------------------------------------------------------------------------
-
-% article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
-
-%----------------------------------------------------------------------------------------
-%	FONT
-%----------------------------------------------------------------------------------------
-
-% % fontspec allows you to use TTF/OTF fonts directly
-% \usepackage{fontspec}
-% \defaultfontfeatures{Ligatures=TeX}
-
-% % modified for ShareLaTeX use
-% \setmainfont[
-% SmallCapsFont = Fontin-SmallCaps.otf,
-% BoldFont = Fontin-Bold.otf,
-% ItalicFont = Fontin-Italic.otf
-% ]
-% {Fontin.otf}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Developer CV
+% LaTeX Class
+% Version 2.0 (12/10/23)
+%
+% This class originates from:
+% http://www.LaTeXTemplates.com
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
-%	PACKAGES
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
-\usepackage{url}
-\usepackage{parskip} 	
 
-%other packages for formatting
-\RequirePackage{color}
-\RequirePackage{graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
-
-%tabularx environment
-\usepackage{tabularx}
-
-%for lists within experience section
-\usepackage{enumitem}
-
-% centered version of 'X' col. type
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
-
-%to prevent spillover of tabular into next pages
-\usepackage{supertabular}
-\usepackage{tabularx}
-\newlength{\fullcollw}
-\setlength{\fullcollw}{0.47\textwidth}
-
-%custom \section
-\usepackage{titlesec}				
+\documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
 \usepackage{multicol}
-\usepackage{multirow}
-
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
-
-%for publications
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
-
-%Setup hyperref package, and colours for links
-\usepackage[unicode, draft=false]{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-\addbibresource{citations.bib}
-\setlength\bibitemsep{1em}
-
-%for social icons
-\usepackage{fontawesome5}
-
-%debug page outer frames
-%\usepackage{showframe}
-
+\setlength{\columnsep}{0mm}
 %----------------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
-%----------------------------------------------------------------------------------------
+\usepackage{lipsum}  
+
+
 \begin{document}
 
-% non-numbered pages
-\pagestyle{empty} 
-
 %----------------------------------------------------------------------------------------
-%	TITLE
+%	TITLE AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
-% \begin{tabularx}{\linewidth}{ @{}X X@{} }
-% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
-% \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
-% \end{tabularx}
+\begin{minipage}[t]{0.5\textwidth} 
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	{ \fontsize{16}{20} \textcolor{black}{\textbf{\MakeUppercase{Yash Siwach}}}} % First name
+	
+	\vspace{6pt}
+	
+	{\Large Developer $\sim$ Student} % Career or current job title
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.2\textwidth} % 20% of the page width for the first row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
 
-\begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Yash Siwach} \\[8.5pt]
-\href{https://github.com/Iamyashsiwach}{\raisebox{-0.05\height}\faGithub\ Iamyashsiwach} \ $|$ \ 
-\href{www.linkedin.com/in/yash-siwach}{\raisebox{-0.05\height}\faLinkedin\ Yash Siwach} 
-$|$ \ 
-\href{mailto:Iamyashsiwach@Gmail.com}{\raisebox{-0.05\height}\faEnvelope \ Iamyashsiwach@Gmail.com} \ $|$ \ 
-\href{tel:+91-7206099609}{\raisebox{-0.05\height}\faMobile \ +91-7206099609} \\
-\end{tabularx}
+    \icon{Phone}{11}{+91-7206099609}\\
+    \icon{MapMarker}{11}{Chandigarh, India}\\
+	
+\end{minipage}
+\begin{minipage}[t]{0.27\textwidth} % 27% of the page width for the second row of icons
+	\vspace{-\baselineskip} % Required for vertically aligning minipages
+	
+	\icon{Envelope}{11}{\href{mailto:Iamyashsiwah@gmail.com}{Iamyashsiwah@gmail.com}}\\	
+    \icon{Github}{11}{\href{https://github.com/Iamyashsiwach}{Iamyashsiwach}}\\
+    \icon{LinkedinSquare}{11}{\href{www.linkedin.com/in/yash-siwach}{Yash Siwach}}\\    
+    
+\end{minipage}
+
 
 %----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
+%	INTRODUCTION, SKILLS AND TECHNOLOGIES
 %----------------------------------------------------------------------------------------
 
-%Interests/ Keywords/ Summary
-\section{Summary}
-An enthusiastic BCA student with a strong proficiency of Swift and SwiftUI, complemented by a background in UI/UX design. Proficient in developing polished iOS applications known for their seamless functionality and aesthetic appeal. Actively exploring the fusion of iOS development with AR/VR technologies to create immersive user experiences. Possesses a keen interest in database management systems (DBMS), enhancing technical versatility. Eager to contribute to groundbreaking projects at the intersection of technology and innovation. 
-
-%Experience
-\section{Work Experience}
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Vice President, Smile Foundation Society NGO} & \hfill Jan 2022 - Present \\[3.75pt]
-
-\multicolumn{2}{@{}X@{}}{
-\begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[--] 
-
-Promoted to Vice President based on performance. Dedicated to social work for the underprivileged. Led initiatives providing essential support. Organized outreach programs for meaningful change.
-    \end{itemize}
+\begin{minipage}[t]{0.46\textwidth}
+    \cvsect{Summary}
+	\vspace{-6pt}
+ 
+    Enthusiastic BCA student proficient in Swift, SwiftUI, and UI/UX design. Known for developing polished iOS apps with seamless functionality and aesthetic appeal. Passionate about integrating AR/VR technologies for immersive user experiences. Interested in DBMS and eager to contribute to innovative projects at the tech frontier.
+\end{minipage}
+\hfill % Whitespace between
+\begin{minipage}[t]{0.465\textwidth}
+    \cvsect{Skills}
+    \vspace{-6pt}
+    
+    \begin{minipage}[t]{0.2\textwidth}
+        \textbf{Languages:}
     \end{minipage}
-} \\
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{ACM Student Member} & \hfill Fab 2023 - Mar 2024 \\[3.75pt]
-
-\multicolumn{2}{@{}X@{}}{
-\begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[--] 
-Contributed to team initiatives, developing leadership and event management skills. Organized and executed events, fostering a vibrant community.
-    \end{itemize}
+    \hfill
+    \begin{minipage}[t]{0.73\textwidth}
+      Swift, C\#, HTML5, CSS3, JavaScript, PHP, SOL, LaTeX.  
     \end{minipage}
-} \\
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{UI/UX Design Intern } & \hfill Apr 2023 - may 2023 \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{
-\begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-        \item[--] 
-Gained hands-on experience in UI/UX design principles. Utilized Figma and Adobe XD to create intuitive interfaces. Developed strong understanding of UI design concepts.
-    \end{itemize}
+    \vspace{4mm}
+    
+    \begin{minipage}[t]{0.2\textwidth}
+        \textbf{Technologies:}
     \end{minipage}
-}
-\end{tabularx}
+    \hfill
+    \begin{minipage}[t]{0.73\textwidth}
+      SwiftUI, MySQL, Git, Unity, Xcode, Figma, Adobe XD, MongoDB, Node.js, Express.
+    \end{minipage}
+    
+\end{minipage}
+
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
-\section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
-
-2022 - 2025 & Bachelor of Computer Applications (AR-VR) at \textbf{Chandigarh University} \hfill  \\ 
-
-2022 & Class 12th CBSE at DAV Public School, Thermal Colony, Panipat\hfill  \\
-
-2020 & Class 10th CBSE at DAV Public School, Thermal Colony, Panipat \hfill  \\
-\end{tabularx}
+\vspace{-5 pt}
+\cvsect{Education}
+\begin{entrylist}
+    \entry
+		{2022 - 2025}
+		{Bachelor of Computer Applications (AR-VR)}
+		{Graduation}
+		{Chandigarh University}
+    \entry
+		{2022}
+		{Class 12th CBSE }
+		{School}
+	 	{DAV Public School, Thermal Colony, Panipat}
+ %  \entry
+	% 	{2/2023}
+	% 	{iOS Swift - The Complete iOS App Development Bootcamp }
+	% 	{Udemy}
+	% 	{Udemy}
+	% \entry
+	% 	{8/2023}
+	% 	{Introduction to Cyber Attacks }
+	%     {{\href{https://coursera.org/verify/8W8PWE46S26X}{Link- Certifications}}}
+	% 	{New York University}
+ %  \entry
+	% 	{8/2023}
+	% 	{Principles of UX/UI Design by Meta }
+	%     {{\href{https://coursera.org/verify/WCEKDRQCCW4B}{Link- Certifications}}}
+	% 	{Meta}
+ %    \entry
+	% 	{4/2024}
+	% 	{Clean Data in SQL using MySQL Workbench}
+	%     {{\href{https://coursera.org/verify/XGVP9YAUKMXT}{Link- Certifications}}}
+	% 	{Coursera}
+ %  \entry
+	% 	{4/2024}
+	% 	{Using MySQL Database with PHP}
+	%     {{\href{https://coursera.org/verify/XMQ936YYLDE3}{Link- Certifications}}}
+	% 	{Coursera}
+ %    \entry
+	% 	{4/2024}
+	% 	{Build a MERN application using Next.js}
+	%     {{\href{https://coursera.org/verify/HQUKBXN7T99S}{Link- Certifications}}}
+	% 	{Coursera}
+\end{entrylist}
 
 %----------------------------------------------------------------------------------------
-%	Licenses & certifications
+%	EXPERIENCE
 %----------------------------------------------------------------------------------------
-\section{Licenses \& certifications}
-\begin{refsection}[citations.bib]
-\nocite{*}
-\setlength{\bibitemsep}{0.5\baselineskip}
-\printbibliography[heading=none]
-\end{refsection}
+\vspace{-20 pt}
+\cvsect{Experience}
+\begin{entrylist}
+	\entry
+        {02/24 -- present}
+		{Vice President}
+		{Smile Foundation Society NGO}
+		{\vspace{-10pt}
+        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
+            Promoted to Vice President based on performance. Dedicated to social work for the underprivileged.
+Led initiatives providing essential support. Organized outreach programs for meaningful change.
 
+        \end{itemize} 
+ }
+	\entry
+		{02/23 -- 03/24}
+		{ACM Student Member}
+		{Association for Computing Machinery}
+		{\vspace{-10pt}
+        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
+           Contributed to team initiatives, developing leadership and event management skills. Organized and
+executed events, fostering a vibrant community.
+
+        \end{itemize} 
+       }
+	\entry
+		{3/23 -- 5/23 }
+		{UI/UX Design Intern}
+		{Imigrom Mediatech}
+		{\vspace{-10pt}
+        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
+          Gained hands-on experience in UI/UX design principles. Utilized Figma and Adobe XD to create
+intuitive interfaces. Developed strong understanding of UI design concepts.
+
+        \end{itemize} 
+      }
+\end{entrylist}
 
 %----------------------------------------------------------------------------------------
-%	SKILLS
+%	Projects
 %----------------------------------------------------------------------------------------
-\section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-Technical Skills  &  \normalsize{Swift . SwiftUI . C\# . HTML5 . CSS3 . JavaScript . MySQL . Git . Xcode . Node.js . PHP . Figma . adobeXD . mongoDB . Express}\\
-Some More Skills  &  \normalsize{Teamwork . Leadership . Time management . Risk management . Adaptability . Decision-making . Presentation skill }\\  
-\end{tabularx}
+\vspace{-20 pt}
+\cvsect{Projects}
+\begin{entrylist}
+    \entry
+		{Unity}
+		{Unity AR Dragon Game}
+		{{\href{https://www.linkedin.com/feed/update/urn:li:activity:7193535905696018432/}{Link- Linkedin}}}
+		{Developed immersive AR game in Unity C\# with dynamic joystick controls, porting to iOS with Xcode. Demonstrated expertise in Unity, C\#, and AR technology. Collaborated on designing captivating virtual environments and quests. Showcased strong problem-solving skills in troubleshooting and optimization. Achieved seamless player interaction with intuitive AR environment.}
+    \entry
+		{Web Development}
+		{Website}
+		{{\href{https://github.com/Iamyashsiwach/SmileFoundationSociety_website.git}{Link- Github}}}
+		{Built a website for an NGO, implementing features such as donation portals, event calendars, and volunteer sign-up forms. Designed user-friendly interfaces and optimized site performance for seamless navigation. Collaborated with stakeholders to ensure alignment with organizational goals and user needs, showcasing strong problem-solving and communication skills.}
+	\entry
+		{iOS Development}
+		{HappyBird - iOS Game Development}
+		{{\href{https://github.com/Iamyashsiwach/HappyBird}{Link- Github}}}
+		{Developed HappyBird, an iOS game inspired by the classic Flappy Bird. Designed for both practice and personal project purposes, HappyBird offers an engaging gaming experience. The game features intuitive tap controls, dynamic obstacle generation, and vibrant graphics.}
+    
+\end{entrylist}
 
-\vfill
-\center{\footnotesize Last updated: \6 may 2024}
+%----------------------------------------------------------------------------------------
+%	certifications
+%----------------------------------------------------------------------------------------
+\vspace{-20 pt}
+\cvsect{certifications}
+\begin{entrylist}
+  
+  \entry
+		{2/23}
+		{iOS Swift - The Complete iOS App Development Bootcamp }
+		{}
+		{Udemy}
+	\entry
+		{8/23}
+		{Introduction to Cyber Attacks }
+	    {{\href{https://coursera.org/verify/8W8PWE46S26X}{Link- Certifications}}}
+		{New York University}
+  \entry
+		{8/23}
+		{Principles of UX/UI Design by Meta }
+	    {{\href{https://coursera.org/verify/WCEKDRQCCW4B}{Link- Certifications}}}
+		{Meta}
+    \entry
+		{4/24}
+		{Clean Data in SQL using MySQL Workbench}
+	    {{\href{https://coursera.org/verify/XGVP9YAUKMXT}{Link- Certifications}}}
+		{Coursera}
+  \entry
+		{4/24}
+		{Using MySQL Database with PHP}
+	    {{\href{https://coursera.org/verify/XMQ936YYLDE3}{Link- Certifications}}}
+		{Coursera}
+    \entry
+		{4/24}
+		{Build a MERN application using Next.js}
+	    {{\href{https://coursera.org/verify/HQUKBXN7T99S}{Link- Certifications}}}
+		{Coursera}
+\end{entrylist}
 
 \end{document}
