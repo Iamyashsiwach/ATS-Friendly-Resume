@@ -6,209 +6,254 @@
 % This class originates from:
 % http://www.LaTeXTemplates.com
 %
-%
-%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
 \documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
 \usepackage{multicol}
 \setlength{\columnsep}{0mm}
-%----------------------------------------------------------------------------------------
+\usepackage{hyperref} % For hyperlinks
 \usepackage{lipsum}  
 
+%----------------------------------------------------------------------------------------
+%   DOCUMENT STARTS HERE
+%----------------------------------------------------------------------------------------
 
 \begin{document}
 
 %----------------------------------------------------------------------------------------
-%	TITLE AND CONTACT INFORMATION
+%   TITLE AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
 \begin{minipage}[t]{0.5\textwidth} 
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	{ \fontsize{16}{20} \textcolor{black}{\textbf{\MakeUppercase{Yash Siwach}}}} % First name
-	
-	\vspace{6pt}
-	
-	{\Large Developer $\sim$ Student} % Career or current job title
+    \vspace{-\baselineskip} % Required for vertically aligning minipages
+    
+    {\fontsize{16}{20} \textcolor{black}{\textbf{\MakeUppercase{Yash Siwach}}}} % First name
+    
+    \vspace{6pt}
+    
+    {\Large Developer $\sim$ Student} % Career or current job title
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.2\textwidth} % 20% of the page width for the first row of icons
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+    \vspace{-\baselineskip} % Required for vertically aligning minipages
+    
+    % The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
 
-    \icon{Phone}{11}{+91-7206099609}\\
-    \icon{MapMarker}{11}{Chandigarh, India}\\
-	
+  \icon{Phone}{11}{\href{tel:+917206099609}{+91-7206099609}}\\
+  \icon{MapMarker}{11}{\href{https://maps.google.com/maps?q=Chandigarh,+India}{Chandigarh, India}}\\
+
+    
 \end{minipage}
 \begin{minipage}[t]{0.27\textwidth} % 27% of the page width for the second row of icons
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	\icon{Envelope}{11}{\href{mailto:Iamyashsiwah@gmail.com}{Iamyashsiwah@gmail.com}}\\	
+    \vspace{-\baselineskip} % Required for vertically aligning minipages
+    
+    \icon{Envelope}{11}{\href{mailto:Iamyashsiwah@gmail.com}{Iamyashsiwah@gmail.com}}\\   
     \icon{Github}{11}{\href{https://github.com/Iamyashsiwach}{Iamyashsiwach}}\\
-    \icon{LinkedinSquare}{11}{\href{www.linkedin.com/in/yash-siwach}{Yash Siwach}}\\    
+    \icon{LinkedinSquare}{11}{\href{https://www.linkedin.com/in/yash-siwach}{Yash Siwach}}\\    
     
 \end{minipage}
 
 
 %----------------------------------------------------------------------------------------
-%	INTRODUCTION, SKILLS AND TECHNOLOGIES
+%   INTRODUCTION, SKILLS AND TECHNOLOGIES
 %----------------------------------------------------------------------------------------
+\vspace{-11pt}
 \begin{minipage}[t]{0.45\textwidth} % Adjusted width to prevent overlap
     \cvsect{Summary}
-    % \vspace{-6pt}
-    % \vspace{1pt} % Added spacing
-         I'm a student developer with skills in mobile (iOS, Swift), web development, and UI/UX design. I build user-centric experiences through projects and have experience with Unity, Xcode, Figma, and more. Currently, I'm pursuing a Bachelor's in Computer Applications (AR-VR) and am always learning (cybersecurity, databases, etc.).
+  \\
+I am a student developer skilled in mobile (iOS, Swift), web development, and UI/UX design, dedicated to crafting user-centric experiences through my projects. I have practical expertise with Unity, Xcode, Figma, and various other tools. Currently pursuing a Bachelor's in Computer Applications (AR-VR), I am actively broadening my knowledge in areas such as cybersecurity and databases to stay current with industry trends.
 \end{minipage}
 \hfill % Whitespace between
 \begin{minipage}[t]{0.465\textwidth}
     \cvsect{Skills}
-    \vspace{-6pt}
-    
+   
     \begin{minipage}[t]{0.2\textwidth}
         \textbf{Languages:}
+        \vspace{-2pt}
     \end{minipage}
     \hfill
     \begin{minipage}[t]{0.73\textwidth}
-        Swift, C\#, HTML5, CSS3, JavaScript, PHP, SQL, LaTeX.  
+        Swift, C\#, HTML5, CSS3, JavaScript, PHP, SQL, LaTeX  
     \end{minipage}
-    \vspace{4mm}
+
+    \vspace{8pt} % Adjust the vertical space as needed
     
     \begin{minipage}[t]{0.2\textwidth}
         \textbf{Technologies:}
+        \vspace{-2pt}
     \end{minipage}
     \hfill
     \begin{minipage}[t]{0.73\textwidth}
-        SwiftUI, MySQL ,DBMS ,Git, Unity, Xcode, Figma, Adobe XD, Node.js ,MongoDB,\\Express.
+        SwiftUI, MySQL, DBMS, Git, Unity, Xcode, Figma, Adobe XD, Node.js
+    \end{minipage}
+    
+    \vspace{8pt} % Adjust the vertical space for soft skills
+    
+    \begin{minipage}[t]{0.2\textwidth}
+        \textbf{Soft Skills:}
+        \vspace{-2pt}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.73\textwidth}
+       Leadership, Teamwork, Problem-solving, Time Management, Adaptability, \\Creativity, Critical Thinking, Multitasking
     \end{minipage}
     
 \end{minipage}
 
 
 %----------------------------------------------------------------------------------------
-%	EDUCATION
+%   EDUCATION
 %----------------------------------------------------------------------------------------
-\vspace{-8 pt}
+\vspace{-2pt}
 \cvsect{Education}
 \begin{entrylist}
     \entry
-		{2022 - 2025}
-		{Bachelor of Computer Applications (AR-VR)}
-		{Graduation}
-		{Chandigarh University}
+        {\textbf{2022 - 2025}}
+        {Bachelor of Computer Applications (AR-VR)}
+        {Graduation}
+        {Chandigarh University}
     \entry
-		{2022}
-		{Class 12th CBSE }
-		{School}
-	 	{DAV Public School, Thermal Colony, Panipat}
+        {\textbf{2022}}
+        {Class 12th CBSE}
+        {School}
+        {DAV Public School, Thermal Colony, Panipat}
 \end{entrylist}
 
 %----------------------------------------------------------------------------------------
-%	EXPERIENCE
+%   EXPERIENCE
 %----------------------------------------------------------------------------------------
-\vspace{-20 pt}
+\vspace{-22pt}
 \cvsect{Experience}
 \begin{entrylist}
-	\entry
-        {02/24 -- present}
-		{Vice President}
-		{Smile Foundation Society NGO}
-		{\vspace{-10pt}
-        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
-          Led multifaceted social initiatives. Orchestrated projects for community empowerment. Collaborated with stakeholders for impactful change. Demonstrated leadership in achieving organizational goals.
-
-        \end{itemize} 
- }
-	\entry
-		{02/23 -- 03/24}
-		{ACM Student Member}
-		{Association for Computing Machinery}
-		{\vspace{-10pt}
-        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
-           Contributed to team initiatives, developing leadership and event management skills. Organized and
-executed events, fostering a vibrant community.
-
-        \end{itemize} 
-       }
-	\entry
-		{3/23 -- 5/23 }
-		{UI/UX Design Intern}
-		{Imigrom Mediatech}
-		{\vspace{-10pt}
-        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt, leftmargin=-1pt]
-          Gained hands-on experience in UI/UX design principles. Utilized Figma and Adobe XD to create
-intuitive interfaces. Developed strong understanding of UI design concepts.
-
-        \end{itemize} 
-      }
+    \entry
+        {\textbf{02/2023 -- \\Present}}
+        {\textbf{Vice President}}
+        {Smile Foundation Society NGO}
+        {\vspace{-10pt}
+            \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=-1pt]
+                \item Leading multifaceted social initiatives and orchestrating community empowerment projects.
+                \item Demonstrating leadership by collaborating with stakeholders for impactful organizational goals.
+            \end{itemize}
+        }
+    \entry
+        {\textbf{02/2023 --\\03/2024}}
+        {\textbf{ACM Student Member}}
+        {Association for Computing Machinery}
+        {\vspace{-10pt}
+            \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=-1pt]
+                \item Contributed to team initiatives, developing leadership and event management skills.
+                \item Organized and executed events, fostering a vibrant community.
+            \end{itemize}
+        }
+    \entry
+        {\textbf{03/2023 -- \\05/2023}}
+        {\textbf{UI/UX Design Intern}}
+        {Imigrom Mediatech}
+        {\vspace{-10pt}
+            \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=-1pt]
+                \item Acquired practical UI/UX design experience.
+                \item Proficient in Figma and Adobe XD for creating intuitive interfaces, with a solid grasp of UI design concepts.
+            \end{itemize}
+        }
 \end{entrylist}
 
 %----------------------------------------------------------------------------------------
-%	Projects
+%   PROJECTS
 %----------------------------------------------------------------------------------------
-\vspace{-20 pt}
+\vspace{-22pt}
 \cvsect{Projects}
+
 \begin{entrylist}
     \entry
-		{Unity}
-		{Unity AR Dragon Game}
-		{{\href{https://www.linkedin.com/feed/update/urn:li:activity:7193535905696018432/}{Link- Linkedin}}}
-		{Developed immersive AR game in Unity C\# with dynamic joystick controls, porting to iOS with Xcode. Demonstrated expertise in Unity, C\#, and AR technology. Collaborated on designing captivating virtual environments and quests. Showcased strong problem-solving skills in troubleshooting and optimization. Achieved seamless player interaction with intuitive AR environment.}
+        {\textbf{IoT}}
+        {Portable Air Quality Index Monitor}
+        {\href{https://www.linkedin.com/posts/yash-siwach_iot-airquality-smarthome-activity-7207296630738341889-wHXx?utm_source=share&utm_medium=member_desktop}{Link - Linkedin}}
+        {\vspace{-\topsep} % Reduce space between title and first item
+        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=-1pt]
+            \item Developed a Portable Air Quality Index (AQI) Monitor using Arduino technology and an MQ-135Hz sensor.
+            \item Integrated Bluetooth connectivity and a real-time display for household air quality monitoring.
+        \end{itemize}}
     \entry
-		{Web Development}
-		{Website}
-		{{\href{https://github.com/Iamyashsiwach/SmileFoundationSociety_website.git}{Link- Github}}}
-		{Built a website for an NGO, implementing features such as donation portals, event calendars, and volunteer sign-up forms. Designed user-friendly interfaces and optimized site performance for seamless navigation. Collaborated with stakeholders to ensure alignment with organizational goals and user needs, showcasing strong problem-solving and communication skills.}
-	\entry
-		{iOS Development}
-		{HappyBird - iOS Game Development}
-		{{\href{https://github.com/Iamyashsiwach/HappyBird}{Link- Github}}}
-		{Developed HappyBird, an iOS game inspired by the classic Flappy Bird. Designed for both practice and personal project purposes, HappyBird offers an engaging gaming experience. The game features intuitive tap controls, dynamic obstacle generation, and vibrant graphics.}
-    
+        {\textbf{Unity}}
+        {Unity AR Dragon Game}
+        {\href{https://www.linkedin.com/feed/update/urn:li:activity:7193535905696018432/}{Link - Linkedin}}
+        {\vspace{-\topsep} % Reduce space between title and first item
+        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=-1pt]
+            \item Developed immersive AR game in Unity C\# with dynamic joystick controls.
+            \item Ported game to iOS using Xcode, showcasing Unity, C\#, AR expertise.
+        \end{itemize}}
+    \entry
+        {\textbf{Web Development}}
+        {Website}
+        {\href{https://github.com/Iamyashsiwach/SmileFoundationSociety_website.git}{Link - Github}}
+        {\vspace{-\topsep} % Reduce space between title and first item
+        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=-1pt]
+            \item Developed feature-rich NGO website with donation portals, event calendars, and volunteer forms.
+            \item Ensured user-friendly interfaces and optimized performance for enhanced usability.
+        \end{itemize}}
+    \entry
+        {\textbf{iOS Development}}
+        {HappyBird - iOS Game Development}
+        {\href{https://github.com/Iamyashsiwach/HappyBird}{Link - Github}}
+        {\vspace{-\topsep} % Reduce space between title and first item
+        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=-1pt]
+            \item Created HappyBird, an iOS game inspired by Flappy Bird.
+            \item Implemented intuitive tap controls, dynamic obstacle generation, and vibrant graphics.
+        \end{itemize}}
 \end{entrylist}
 
+
 %----------------------------------------------------------------------------------------
-%	certifications
+%   CERTIFICATIONS
 %----------------------------------------------------------------------------------------
-\vspace{-20 pt}
-\cvsect{certifications}
-\begin{entrylist}
-  
-  \entry
-		{2/23}
-		{iOS Swift - The Complete iOS App Development Bootcamp }
-		{}
-		{Udemy}
-	\entry
-		{8/23}
-		{Introduction to Cyber Attacks }
-	    {{\href{https://coursera.org/verify/8W8PWE46S26X}{Link- Certifications}}}
-		{New York University}
-  \entry
-		{8/23}
-		{Principles of UX/UI Design by Meta }
-	    {{\href{https://coursera.org/verify/WCEKDRQCCW4B}{Link- Certifications}}}
-		{Meta}
+%----------------------------------------------------------------------------------------
+%   CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+\vspace{-20pt}
+\cvsect{Certifications}
+\begin{entrylist}\vspace{-6pt}
+    \entry 
+       {\textbf{02/2023}}
+        {iOS Swift - The Complete iOS App Development Bootcamp}
+        {}
+        {Udemy}
+        \vspace{-6pt}
     \entry
-		{4/24}
-		{Clean Data in SQL using MySQL Workbench}
-	    {{\href{https://coursera.org/verify/XGVP9YAUKMXT}{Link- Certifications}}}
-		{Coursera}
-  \entry
-		{4/24}
-		{Using MySQL Database with PHP}
-	    {{\href{https://coursera.org/verify/XMQ936YYLDE3}{Link- Certifications}}}
-		{Coursera}
+       {\textbf{08/2023}}
+        {Introduction to Cyber Attacks}
+        {\href{https://coursera.org/verify/8W8PWE46S26X}{Link - Certification}}
+        {New York University}
+        \vspace{-6pt}
     \entry
-		{4/24}
-		{Build a MERN application using Next.js}
-	    {{\href{https://coursera.org/verify/HQUKBXN7T99S}{Link- Certifications}}}
-		{Coursera}
+       {\textbf{08/2023}}
+        {Principles of UX/UI Design by Meta}
+        {\href{https://coursera.org/verify/WCEKDRQCCW4B}{Link - Certification}}
+        {Meta}
+    \entry
+       {\textbf{04/2024}}
+        {Clean Data in SQL using MySQL Workbench}
+        {\href{https://coursera.org/verify/XGVP9YAUKMXT}{Link - Certification}}
+        {Coursera}
+        \vspace{-6pt}
+    \entry
+       {\textbf{04/2024}}
+        {Using MySQL Database with PHP}
+        {\href{https://coursera.org/verify/XMQ936YYLDE3}{Link - Certification}}
+        {Coursera}
+        \vspace{-6pt}
+    \entry
+       {\textbf{04/2024}}
+        {Build a MERN application using Next.js}
+        {\href{https://coursera.org/verify/HQUKBXN7T99S}{Link - Certification}}
+        {Coursera}
 \end{entrylist}
 
+
+%----------------------------------------------------------------------------------------
+%   END DOCUMENT
+%----------------------------------------------------------------------------------------
 \end{document}
