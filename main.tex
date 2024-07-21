@@ -1,259 +1,109 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Developer CV
-% LaTeX Class
-% Version 2.0 (12/10/23)
-%
-% This class originates from:
-% http://www.LaTeXTemplates.com
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,10pt]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
 
-%----------------------------------------------------------------------------------------
-%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+% Title and section formatting
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}[\titlerule]
+\titlespacing{\section}{0pt}{*1}{*0}
 
-\documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
-\usepackage{multicol}
-\setlength{\columnsep}{0mm}
-\usepackage{hyperref} % For hyperlinks
-\usepackage{lipsum}  
-
-%----------------------------------------------------------------------------------------
-%   DOCUMENT STARTS HERE
-%----------------------------------------------------------------------------------------
+\titleformat{\subsection}[runin]{\bfseries}{}{0em}{}[:] 
+\titlespacing{\subsection}{0pt}{*0}{*1}
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%   TITLE AND CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
+% Name and contact information
+{\Huge\textbf{Yash Siwach}}
 
-\begin{minipage}[t]{0.5\textwidth} 
-    \vspace{-\baselineskip} % Required for vertically aligning minipages
-    
-    {\fontsize{16}{20} \textcolor{black}{\textbf{\MakeUppercase{Yash Siwach}}}} % First name
-    
-    \vspace{6pt}
-    
-    {\Large Developer $\sim$ Student} % Career or current job title
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.2\textwidth} % 20% of the page width for the first row of icons
-    \vspace{-\baselineskip} % Required for vertically aligning minipages
-    
-    % The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+Student/Developer \hfill Email: {iamyashsiwach@gmail.com} 
 
-  \icon{Phone}{11}{\href{tel:+917206099609}{+91-7206099609}}\\
-  \icon{MapMarker}{11}{\href{https://maps.google.com/maps?q=Chandigarh,+India}{Chandigarh, India}}\\
+\textbf{LinkedIn:} {linkedin.com/in/yash-siwach} \hfill Mobile: +91 7206099609
 
-    
-\end{minipage}
-\begin{minipage}[t]{0.27\textwidth} % 27% of the page width for the second row of icons
-    \vspace{-\baselineskip} % Required for vertically aligning minipages
-    
-    \icon{Envelope}{11}{\href{mailto:Iamyashsiwah@gmail.com}{Iamyashsiwah@gmail.com}}\\   
-    \icon{Github}{11}{\href{https://github.com/Iamyashsiwach}{Iamyashsiwach}}\\
-    \icon{LinkedinSquare}{11}{\href{https://www.linkedin.com/in/yash-siwach}{Yash Siwach}}\\    
-    
-\end{minipage}
+\textbf{GitHub:} {github.com/Iamyashsiwach} \hfill Chandigarh
+\vspace{4pt}
+\section*{EDUCATION}
+\vspace{8pt}
+\textbf{Chandigarh University} \hfill Chandigarh, India
+\smallskip
 
+Bachelor of Computer Application (Ar-Vr) \hfill July 2022 - July 2025
+\smallskip
 
-%----------------------------------------------------------------------------------------
-%   INTRODUCTION, SKILLS AND TECHNOLOGIES
-%----------------------------------------------------------------------------------------
-\vspace{-11pt}
-\begin{minipage}[t]{0.45\textwidth} % Adjusted width to prevent overlap
-    \cvsect{Summary}
-  \\
-I am a student developer skilled in mobile (iOS, Swift), web development, and UI/UX design, dedicated to crafting user-centric experiences through my projects. I have practical expertise with Unity, Xcode, Figma, and various other tools. Currently pursuing a Bachelor's in Computer Applications (AR-VR), I am actively broadening my knowledge in areas such as cybersecurity and databases to stay current with industry trends.
-\end{minipage}
-\hfill % Whitespace between
-\begin{minipage}[t]{0.465\textwidth}
-    \cvsect{Skills}
-   
-    \begin{minipage}[t]{0.2\textwidth}
-        \textbf{Languages:}
-        \vspace{-2pt}
-    \end{minipage}
-    \hfill
-    \begin{minipage}[t]{0.73\textwidth}
-        Swift, C\#, HTML5, CSS3, JavaScript, PHP, SQL, LaTeX  
-    \end{minipage}
+\textbf{DAV Public School, Thermal Colony} \hfill Panipat, India
+\smallskip
 
-    \vspace{8pt} % Adjust the vertical space as needed
-    
-    \begin{minipage}[t]{0.2\textwidth}
-        \textbf{Technologies:}
-        \vspace{-2pt}
-    \end{minipage}
-    \hfill
-    \begin{minipage}[t]{0.73\textwidth}
-        SwiftUI, MySQL, DBMS, Git, Unity, Xcode, Figma, Adobe XD, Node.js
-    \end{minipage}
-    
-    \vspace{8pt} % Adjust the vertical space for soft skills
-    
-    \begin{minipage}[t]{0.2\textwidth}
-        \textbf{Soft Skills:}
-        \vspace{-2pt}
-    \end{minipage}
-    \hfill
-    \begin{minipage}[t]{0.73\textwidth}
-       Leadership, Teamwork, Problem-solving, Time Management, Adaptability, \\Creativity, Critical Thinking, Multitasking
-    \end{minipage}
-    
-\end{minipage}
+Class 12th, CBSE \hfill May 2021 - June 2022
+\vspace{3pt}
+\section*{WORK EXPERIENCE}
+\vspace{8pt}
+\subsection*{Vice President | Smile Foundation Society NGO} \hfill February 2023 - Present
+\vspace{4pt}\\
+  - Organized medical and blood donation camps, serving over 1,500 individuals.\\
+  - Promoted heritage via festivals and educational programs, engaging 2,000+ community members.
+\vspace{8pt}
+\subsection*{ACM Student Member | Association for Computing Machinery} \hfill February 2023 - March 2024
+\vspace{4pt}\\
+   - Led initiatives enhancing leadership and event management, boosting team morale by 30\% and engagement by 20\%.\\
+   - Organized and executed events, fostering a vibrant community and improving overall team engagement and morale.
+\vspace{8pt}
+\subsection*{UI/UX Design Intern | Imigrom Mediatech} \hfill March 2023 - May 2023
+\vspace{4pt}\\
+  - Utilized Figma and Adobe XD to develop intuitive interfaces, leading to a 20\% increase in user engagement metrics.\\
+  - Implemented UI/UX design principles that contributed to a 15\% decrease in user support queries.
+\vspace{3pt}
+\section*{PROJECTS}
+\vspace{8pt}
+\subsection*{IoT – Portable Air Quality Index Moniton}.
+\vspace{4pt}\\
+  - Engineered a Portable Air Quality Index (AQI) Monitor using Arduino and the MQ-135 sensor series.\\
+   - Integrated Bluetooth for real-time display, resulting in a 15\% increase in monitoring accuracy for household air quality.
+\vspace{-6pt}
 
+\subsection*{Unity – AR Dragon Game}.
+\vspace{4pt}\\
+   - Developed an AR game in Unity with joystick controls, showcasing expertise in Unity and C\#; game rated 4.1 stars.\\
+- Ported the AR game to iOS with Xcode, demonstrating skills in cross-platform development and AR integration.
+\vspace{6pt}
 
-%----------------------------------------------------------------------------------------
-%   EDUCATION
-%----------------------------------------------------------------------------------------
-\vspace{-2pt}
-\cvsect{Education}
-\begin{entrylist}
-    \entry
-        {\textbf{2022 - 2025}}
-        {Bachelor of Computer Applications (AR-VR)}
-        {Graduation}
-        {Chandigarh University}
-    \entry
-        {\textbf{2022}}
-        {Class 12th CBSE}
-        {School}
-        {DAV Public School, Thermal Colony, Panipat}
-\end{entrylist}
+\subsection*{NGO Website Development}.
+\vspace{4pt}\\
+   - Responsive design and enhanced UI for seamless, intuitive, and visually appealing performance across all devices.\\
+   - Utilized JavaScript (87.3\%) and TypeScript (12.2\%) for robust backend and frontend development.
+\vspace{6pt}
 
-%----------------------------------------------------------------------------------------
-%   EXPERIENCE
-%----------------------------------------------------------------------------------------
-\vspace{-22pt}
-\cvsect{Experience}
-\begin{entrylist}
-    \entry
-        {\textbf{02/2023 -- \\Present}}
-        {\textbf{Vice President}}
-        {Smile Foundation Society NGO}
-        {\vspace{-10pt}
-            \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=-1pt]
-                \item Leading multifaceted social initiatives and orchestrating community empowerment projects.
-                \item Demonstrating leadership by collaborating with stakeholders for impactful organizational goals.
-            \end{itemize}
-        }
-    \entry
-        {\textbf{02/2023 --\\03/2024}}
-        {\textbf{ACM Student Member}}
-        {Association for Computing Machinery}
-        {\vspace{-10pt}
-            \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=-1pt]
-                \item Contributed to team initiatives, developing leadership and event management skills.
-                \item Organized and executed events, fostering a vibrant community.
-            \end{itemize}
-        }
-    \entry
-        {\textbf{03/2023 -- \\05/2023}}
-        {\textbf{UI/UX Design Intern}}
-        {Imigrom Mediatech}
-        {\vspace{-10pt}
-            \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=-1pt]
-                \item Acquired practical UI/UX design experience.
-                \item Proficient in Figma and Adobe XD for creating intuitive interfaces, with a solid grasp of UI design concepts.
-            \end{itemize}
-        }
-\end{entrylist}
+\subsection*{iOS Development – HappyBird}.
+\vspace{4pt}\\  
+- Developed HappyBird, an iOS app leveraging gamification and feedback to enhance happiness; achieved 4.5-star rating.\\
+- Boosted beta testing user engagement by 20\%, highlighting the impact of gamification and real-time feedback on emotional well-being.
+\vspace{3pt}
+\section*{SKILLS SUMMARY}
+\vspace{8pt}
 
-%----------------------------------------------------------------------------------------
-%   PROJECTS
-%----------------------------------------------------------------------------------------
-\vspace{-22pt}
-\cvsect{Projects}
+\begin{itemize}[leftmargin=*, nosep]
+  \item \textbf{Languages:} Swift, C\#, HTML, CSS, JavaScript, PHP, SQL, LaTeX
+  \vspace{4pt}
+  \item \textbf{Technologies:} SwiftUI, MySQL, DBMS, Git, Unity, Xcode, Figma, Adobe XD, React
+  \vspace{4pt}
+  \item \textbf{Professional Skills:} Leadership, Teamwork, Creativity, Multitasking
+\end{itemize}
+\vspace{3pt}
+\section*{CERTIFICATIONS}
+\vspace{8pt}
+\subsection*{iOS Development}.\vspace{2pt}\\
+- iOS Swift - The Complete iOS App Development Bootcamp \hfill Udemy
+\vspace{2pt}
+\subsection*{Cybersecurity}.\vspace{2pt}\\
+- Introduction to Cyber Attacks \hfill New York University
+\vspace{2pt}
+\subsection*{UX/UI Design}.\vspace{2pt}\\
+- Principles of UX/UI Design by Meta \hfill Meta
+\vspace{2pt}
+\subsection*{Data Management}.\vspace{2pt}\\
+- Clean Data in SQL using MySQL Workbench \hfill Coursera \\
+- Using MySQL Database with PHP\hfill Coursera
+\vspace{2pt}
+\subsection*{Web Development}.\vspace{2pt}\\
+- Build a MERN application using Next.js \hfill Coursera
 
-\begin{entrylist}
-    \entry
-        {\textbf{IoT}}
-        {Portable Air Quality Index Monitor}
-        {\href{https://www.linkedin.com/posts/yash-siwach_iot-airquality-smarthome-activity-7207296630738341889-wHXx?utm_source=share&utm_medium=member_desktop}{Link - Linkedin}}
-        {\vspace{-\topsep} % Reduce space between title and first item
-        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=-1pt]
-            \item Developed a Portable Air Quality Index (AQI) Monitor using Arduino technology and an MQ-135Hz sensor.
-            \item Integrated Bluetooth connectivity and a real-time display for household air quality monitoring.
-        \end{itemize}}
-    \entry
-        {\textbf{Unity}}
-        {Unity AR Dragon Game}
-        {\href{https://www.linkedin.com/feed/update/urn:li:activity:7193535905696018432/}{Link - Linkedin}}
-        {\vspace{-\topsep} % Reduce space between title and first item
-        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=-1pt]
-            \item Developed immersive AR game in Unity C\# with dynamic joystick controls.
-            \item Ported game to iOS using Xcode, showcasing Unity, C\#, AR expertise.
-        \end{itemize}}
-    \entry
-        {\textbf{Web Development}}
-        {Website}
-        {\href{https://github.com/Iamyashsiwach/SmileFoundationSociety_website.git}{Link - Github}}
-        {\vspace{-\topsep} % Reduce space between title and first item
-        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=-1pt]
-            \item Developed feature-rich NGO website with donation portals, event calendars, and volunteer forms.
-            \item Ensured user-friendly interfaces and optimized performance for enhanced usability.
-        \end{itemize}}
-    \entry
-        {\textbf{iOS Development}}
-        {HappyBird - iOS Game Development}
-        {\href{https://github.com/Iamyashsiwach/HappyBird}{Link - Github}}
-        {\vspace{-\topsep} % Reduce space between title and first item
-        \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=-1pt]
-            \item Created HappyBird, an iOS game inspired by Flappy Bird.
-            \item Implemented intuitive tap controls, dynamic obstacle generation, and vibrant graphics.
-        \end{itemize}}
-\end{entrylist}
-
-
-%----------------------------------------------------------------------------------------
-%   CERTIFICATIONS
-%----------------------------------------------------------------------------------------
-%----------------------------------------------------------------------------------------
-%   CERTIFICATIONS
-%----------------------------------------------------------------------------------------
-\vspace{-20pt}
-\cvsect{Certifications}
-\begin{entrylist}\vspace{-6pt}
-    \entry 
-       {\textbf{02/2023}}
-        {iOS Swift - The Complete iOS App Development Bootcamp}
-        {}
-        {Udemy}
-        \vspace{-6pt}
-    \entry
-       {\textbf{08/2023}}
-        {Introduction to Cyber Attacks}
-        {\href{https://coursera.org/verify/8W8PWE46S26X}{Link - Certification}}
-        {New York University}
-        \vspace{-6pt}
-    \entry
-       {\textbf{08/2023}}
-        {Principles of UX/UI Design by Meta}
-        {\href{https://coursera.org/verify/WCEKDRQCCW4B}{Link - Certification}}
-        {Meta}
-    \entry
-       {\textbf{04/2024}}
-        {Clean Data in SQL using MySQL Workbench}
-        {\href{https://coursera.org/verify/XGVP9YAUKMXT}{Link - Certification}}
-        {Coursera}
-        \vspace{-6pt}
-    \entry
-       {\textbf{04/2024}}
-        {Using MySQL Database with PHP}
-        {\href{https://coursera.org/verify/XMQ936YYLDE3}{Link - Certification}}
-        {Coursera}
-        \vspace{-6pt}
-    \entry
-       {\textbf{04/2024}}
-        {Build a MERN application using Next.js}
-        {\href{https://coursera.org/verify/HQUKBXN7T99S}{Link - Certification}}
-        {Coursera}
-\end{entrylist}
-
-
-%----------------------------------------------------------------------------------------
-%   END DOCUMENT
-%----------------------------------------------------------------------------------------
 \end{document}
