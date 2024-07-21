@@ -21,20 +21,20 @@ This repository contains a template for an ATS (Applicant Tracking System) frien
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/iamyashsiwach/reasume.git
-   cd reasume
+   git clone https://github.com/iamyashsiwach/ATS-Friendly-Resume.git
+   cd ATS-Friendly-Resume
    ```
 
-2. Open `reasume.tex` in your LaTeX editor.
+2. Open `ATS-Friendly-Resume.tex` in your LaTeX editor.
 
 ### Usage
 
-1. Replace placeholder text in `resume.tex` with your own information.
+1. Replace placeholder text in `ATS-Friendly-Resume.tex` with your own information.
 2. Add or remove sections as needed (e.g., Education, Experience, Projects, Skills).
 3. Compile the document to produce a PDF:
 
    ```sh
-   pdflatex resume.tex
+   pdflatex ATS-Friendly-Resume.tex
    ```
 
 4. Review and make adjustments if necessary.
@@ -47,11 +47,3 @@ This repository contains a template for an ATS (Applicant Tracking System) frien
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to customize this README to better suit your repository.
