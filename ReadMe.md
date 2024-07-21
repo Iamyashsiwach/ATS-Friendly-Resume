@@ -1,27 +1,57 @@
+# ATS-Friendly Resume in LaTeX
 
-# My Resume
+This repository contains a template for an ATS (Applicant Tracking System) friendly resume written in LaTeX, specifically designed for students.
 
-This repository contains the LaTeX source code for my resume, created using Overleaf.
+## Features
 
-## Overview
+- **ATS-Friendly**: Compliant with most Applicant Tracking Systems.
+- **Simple Design**: Easy-to-read and professional.
+- **Customizable**: Easily adaptable to your personal information.
+- **LaTeX-Powered**: High-quality typesetting and appearance.
 
-My resume showcases my skills, experience, and qualifications as a Student Resume. It provides a comprehensive overview of my education, work history, projects, and technical expertise.
+## Getting Started
 
-## Contents
+### Prerequisites
 
-- **main.tex**: The main LaTeX file containing the structure and content of my resume.
-- **style.cls**: The LaTeX class file defines the formatting and layout for my resume.
-- **sections/**: Folder containing individual sections of my resume (e.g., education.tex, experience.tex, projects.tex).
+- Install LaTeX on your system (e.g., TeX Live).
+- Alternatively, use an online LaTeX editor like Overleaf.
 
-## Usage
+### Installation
 
-To compile the LaTeX source code and generate the PDF resume:
+1. Clone the repository:
 
-1. Clone or download the repository to your local machine.
-2. Open the main.tex file in a LaTeX editor or Overleaf.
-3. Make any desired modifications to the content, formatting, or styling.
-4. Compile the document to generate the PDF resume.
+   ```sh
+   git clone https://github.com/iamyashsiwach/reasume.git
+   cd reasume
+   ```
 
-## Contact
+2. Open `reasume.tex` in your LaTeX editor.
 
-For any inquiries or further information, please contact me at Iamyashsiwach@gmail.com
+### Usage
+
+1. Replace placeholder text in `resume.tex` with your own information.
+2. Add or remove sections as needed (e.g., Education, Experience, Projects, Skills).
+3. Compile the document to produce a PDF:
+
+   ```sh
+   pdflatex resume.tex
+   ```
+
+4. Review and make adjustments if necessary.
+
+## Tips for Customization
+
+- Use relevant keywords for the job you're applying for.
+- Use strong action verbs and quantify achievements where possible.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+Feel free to customize this README to better suit your repository.
